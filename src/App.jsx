@@ -20,6 +20,20 @@ function App() {
       })
   }
 
+
+
+  //  Trasformiamo la stringa statica della lingua in una vera e propria bandiera della
+  //  nazione corrispondente
+  //  gestendo il caso in cui non abbiamo la bandiera della
+  //  nazione ritornata dall API
+
+  const linguaBandiera = (lingua) => {
+    const lingue = {
+
+    }
+  }
+
+
   return (
     <div className="container">
       <h1>Boolflix</h1>
@@ -41,7 +55,7 @@ function App() {
           <div key={film.id}>
             <h3>{film.title}</h3>
             <p><strong>Titolo originale:</strong> {film.original_title}</p>
-            <p><strong>Lingua:</strong> {film.original_language}</p>
+            <p><strong>Lingua:</strong> {linguaBandiera(film.original_language)}</p>
             <p><strong>Voto:</strong> {film.vote_average}</p>
           </div>
         ))}
