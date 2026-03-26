@@ -20,9 +20,9 @@ function App() {
 
   const cercaFilm = () => {
 
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${cerca}`
+    const urlFilm = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${cerca}`
 
-    fetch(url)
+    fetch(urlFilm)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
