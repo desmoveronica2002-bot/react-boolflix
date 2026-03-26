@@ -16,11 +16,14 @@ function App() {
   const apiKey = import.meta.env.VITE_API_KEY
 
   const [cerca, setCerca] = useState('') //testo che l’utente scrive nella barra di ricerca
+
   const [film, setFilm] = useState([]) // array risultati ricerca film
+  const [serie, setSerie] = useState([]); //array risultati ricerca serie
 
   const cercaFilm = () => {
 
     const urlFilm = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${cerca}`
+    const urlSerieTv = `https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&query=${cerca}&language=it_IT`
 
     fetch(urlFilm)
       .then((response) => response.json())
@@ -28,6 +31,16 @@ function App() {
         console.log(data)
         setFilm(data.results) //salvo i risultati 
       })
+
+      
+    fetch(urlSerieTv)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        setSerie(data.results) //salvo i risultati 
+      })
+
+
   }
 
 
