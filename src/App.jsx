@@ -1,5 +1,15 @@
 import { useState } from 'react'
 
+// importo immagini
+import uk from './assets/uk.png'
+import it from './assets/ita.png'
+import fr from './assets/francia.svg'
+import es from './assets/spagna.svg'
+import de from './assets/germania.png'
+import ja from './assets/giappone.jpg'
+import zh from './assets/cina.svg'
+import ru from './assets/russia.svg'
+
 
 
 function App() {
@@ -27,15 +37,35 @@ function App() {
   //  gestendo il caso in cui non abbiamo la bandiera della
   //  nazione ritornata dall API
 
-  const linguaBandiera = (lingua) => {
-    const lingue = {
+const linguaBandiera = (lingua) => {
 
-    }
+  const bandiere = {
+    en: uk,
+    it: it,
+    fr: fr,
+    es: es,
+    de: de,
+    ja: ja,
+    zh: zh,
+    ru: ru,
   }
+
+  const bandieraTrovata = bandiere[lingua]
+
+  // Se bandiera trovata
+  if (bandieraTrovata) {
+    return <img src={bandieraTrovata} alt={lingua} />
+  }
+
+  // Se bandiera non trovata
+  return <span>{lingua}</span>
+}
+
 
 
   return (
     <div className="container">
+      
       <h1>Boolflix</h1>
 
       <div>
