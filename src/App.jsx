@@ -54,7 +54,7 @@ const linguaBandiera = (lingua) => {
 
   // Se bandiera trovata
   if (bandieraTrovata) {
-    return <img src={bandieraTrovata} alt={lingua} />
+    return <img src={bandieraTrovata} alt={lingua} className='bandiere' />
   }
 
   // Se bandiera non trovata
