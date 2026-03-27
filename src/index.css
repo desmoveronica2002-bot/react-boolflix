@@ -1,4 +1,17 @@
 .bandiere{
-    width:24px;
-    height:16px;
+   width:24px;
+   height:16px;
+}
+.overlay {
+   background: rgba(0, 0, 0, 0.75); 
+   opacity: 0;
+   transition: opacity 0.3s ease;
+}
+
+.overlay:hover {
+   opacity: 1;
+}
+
+.card-img-top {
+   transition: transform 0.3s ease;
 }
