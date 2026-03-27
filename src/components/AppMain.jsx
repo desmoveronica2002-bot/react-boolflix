@@ -15,7 +15,7 @@ export default function AppMain ({film, serie, linguaBandiera, generaStelle}){
                 Poi aggiungere la parte finale dell URL passata dall API
                 */}
 
-               <img src={`https://image.tmdb.org/t/p/w185${film.poster_path }`}/>
+               <img src={`https://image.tmdb.org/t/p/w342${film.poster_path }`}/>
 
 
 
