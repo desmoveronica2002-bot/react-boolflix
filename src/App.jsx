@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import AppHeader from './components/AppHeader';
 
 // importo immagini
 import uk from './assets/uk.png'
@@ -103,20 +104,7 @@ const generaStelle = (voto) => {
 
   return (
     <div className="container">
-      
-      <h1>Boolflix</h1>
-
-      <div>
-        <input
-          type="text"
-          value={cerca}
-          onChange={(event) => setCerca(event.target.value)}
-          onKeyDown={(event) => event.key === 'Enter' && cercaFilm()}
-        />
-
-        <button onClick={cercaFilm}>Cerca</button>
-      </div>
-
+      <AppHeader cerca={cerca} setCerca={setCerca} cercaFilm={cercaFilm} />
 
       <div>
         {film.map((film) => (
