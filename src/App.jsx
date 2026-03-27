@@ -92,23 +92,14 @@ const generaStelle = (voto) => {
 
   for (let i = 0; i < 5; i++) {
     if (i < stelle) {
-      stelleArray.push(<i class="fa-solid fa-star"></i>)
+      stelleArray.push(<i key={i} className="fa-solid fa-star"></i>)
     } else {
-      stelleArray.push(<i class="fa-regular fa-star"></i>)
+      stelleArray.push(<i key={i} className="fa-regular fa-star"></i>)
     }
   }
 
   return stelleArray
 }
-
-
-
-
-
-
-
-
-
 
 
   return (
