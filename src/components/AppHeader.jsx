@@ -1,4 +1,3 @@
-
 export default function AppHeader ({ cerca, setCerca, cercaFilm }){
 
 
