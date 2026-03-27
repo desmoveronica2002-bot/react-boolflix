@@ -109,6 +109,8 @@ const linguaBandiera = (lingua) => {
  
              */}
 
+            <img src={`https://image.tmdb.org/t/p/w185${film.poster_path}`}/>
+
 
 
 
