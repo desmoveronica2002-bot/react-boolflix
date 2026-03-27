@@ -44,7 +44,6 @@ function App() {
   }
 
 
-
   //  Trasformiamo la stringa statica della lingua in una vera e propria bandiera della
   //  nazione corrispondente
   //  gestendo il caso in cui non abbiamo la bandiera della
