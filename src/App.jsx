@@ -104,7 +104,7 @@ const generaStelle = (voto) => {
 
 
   return (
-    <div className="container">
+    <div className="container bg-dark">
       <AppHeader cerca={cerca} setCerca={setCerca} cercaFilm={cercaFilm} />
       <AppMain film={film} serie={serie} linguaBandiera={linguaBandiera} generaStelle={generaStelle} />
     </div>
