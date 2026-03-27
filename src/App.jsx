@@ -81,10 +81,32 @@ const linguaBandiera = (lingua) => {
 
 //-Trasformiamo il voto da 1 a 10 decimale in un numero intero da 1 a 5-
 
-//stampare a schermo un numero di stelle piene che vanno da 1 a 5, 
+//stampare a schermo un numero di stelle piene che vanno da 1 a 5
 //lasciando le restanti vuote
-//Arrotondiamo sempre per eccesso all’unità successiva
+//Arrotondiamo sempre per eccesso all unità successiva
 //non gestiamo icone mezze piene
+
+const generaStelle = (voto) => {
+  const stelle = Math.ceil(voto / 2) // da 1-10 a 1-5 arrotondando per eccesso
+  const stelleArray = []
+
+  for (let i = 0; i < 5; i++) {
+    if (i < stelle) {
+      stelleArray.push(<i class="fa-solid fa-star"></i>)
+    } else {
+      stelleArray.push(<i class="fa-regular fa-star"></i>)
+    }
+  }
+
+  return stelleArray
+}
+
+
+
+
+
+
+
 
 
 
@@ -125,7 +147,7 @@ const linguaBandiera = (lingua) => {
 
             <p><strong>Titolo originale:</strong> {film.original_title}</p>
             <p><strong>Lingua:</strong> {linguaBandiera(film.original_language)}</p>
-            <p><strong>Voto:</strong> {film.vote_average}</p>
+            <p><strong>Voto:</strong>{generaStelle(film.vote_average)}</p>
           </div>
         ))}
       </div>
