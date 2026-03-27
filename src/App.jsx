@@ -76,6 +76,19 @@ const linguaBandiera = (lingua) => {
 
 
 
+
+
+
+//-Trasformiamo il voto da 1 a 10 decimale in un numero intero da 1 a 5-
+
+//stampare a schermo un numero di stelle piene che vanno da 1 a 5, 
+//lasciando le restanti vuote
+//Arrotondiamo sempre per eccesso all’unità successiva
+//non gestiamo icone mezze piene
+
+
+
+
   return (
     <div className="container">
       
@@ -102,22 +115,11 @@ const linguaBandiera = (lingua) => {
              - Aggiungiamo la copertina del film o della serie-
             
              Ci viene passata dall API solo la parte finale dell URL
-             
              Prendere quindi l URL base delle immagini di TMDB: https://image.tmdb.org/t/p/ per poi aggiungere la dimensione che vogliamo generare
-
              Poi aggiungere la parte finale dell URL passata dall API
- 
              */}
 
-            <img src={`https://image.tmdb.org/t/p/w185${film.poster_path}`}/>
-
-
-
-
-
-
-
-
+            <img src={`https://image.tmdb.org/t/p/w185${film.poster_path }`}/>
 
 
 
